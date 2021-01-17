@@ -1,0 +1,24 @@
+// Simple Pre-Loader Example in Javascript
+// Redirects Google Chrome v42 User Agent to WebGL
+// Redirects all else to Web Player
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var chromeVersion = window.navigator.userAgent.match(/Chrome\/(\d+)\./);
+if (chromeVersion && chromeVersion[1]) {
+  if (parseInt(chromeVersion[1], 10) >= 42) {
+//    window.location = "https://dl.dropboxusercontent.com/u/248943005/ToER_FB/WebGL/index.html";
+    window.location = "../ToER_FB/WebGL/index.html";
+  }
+  else{
+  	window.location = "../ToER_FB/WebPlayer/WebPlayer.html";
+  }
+}
+else{
+  window.location = "../ToER_FB/WebPlayer/WebPlayer.html";
+}
+
+</script>
+</body>
+</html>
